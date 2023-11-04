@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn Window</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="assignment5_index.js"></script>
+    <div class="parent">
+      <form action="">
+        <div class="card">
+          <div class="section1">
+            <div><img class="logo" src="../Resource/lexp.png" alt="" /></div>
+          </div>
+          <div class="section2">
+            <div class="login">Email</div>
+            <div>
+              <label for="Enter Email">
+                <input
+                  class="login-box"
+                  type="email"
+                  placeholder="name@explorin.io"
+                  pattern=".+@explorin.io"
+                  required
+                  title="Enter a valid email of format [name]@explorin.io "
+                />
+              </label>
+            </div>
+          </div>
+          <div class="section3">
+            <div class="pwd">Password</div>
+            <div>
+              <input
+                class="pwd-box"
+                type="password"
+                minlength="8"
+                required
+                name="pwd"
+                placeholder="min 8 chars*"
+                id="pwd"
+              />
+            </div>
+          </div>
+          <div class="section4">
+            <input class="btn" id="sub" type="submit" value="Submit" />
+            <input onclick="Onreset()" class="btn" type="reset" value="Reset" />
+          </div>
+        </div>
+      </form>
+
+      <!-- <script>
+        const pwd_box = document.getElementsByClassName("pwd-box");
+
+        const submit = document.getElementById("sub");
+
+        submit.addEventListener("click", function () {
+          let password = pwd_box.value;
+
+          if (password.length < 3) {
+            alert("Length of Password is Less than 3");
+          } else if (password.length > 11) {
+            alert("Length of Password is More than 11");
+          } else {
+            for (let i = 0; i < password.length; i++) {
+              if (password[i] < "0") {
+                alert("Should be a Number");
+                break;
+              }
+
+              if (password[i] > "9") {
+                alert("Should be a Number");
+                break;
+              }
+            }
+          }
+        });
+      </script> -->
+    </div>
+  </body>
+</html>
